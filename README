@@ -5,6 +5,17 @@ Description
 ---
 A make file to automatically generate multiple personal statements.
 
+
+Motivation
+---
+When you are applying for serveral schools, you will find that you have
+to write a specified paragraph (your "school paragraph") for each school
+and generate the pdf file respectively.
+
+I want to write an automation tool to free you from this kind of trivial
+compling and configuring efforts.
+
+
 How to use it
 ---
 
@@ -12,19 +23,52 @@ How to use it
 
   personal_statement_maker
   |
-  |-- template.tex           (your template latex file for all schools)
+  |-- configure.py
   |-- Makefile
   |-- school_list            (configuration file)
   |-- src
+      |-- template.tex
       |-- PhD.tex            (your general paragraphs)
       |-- <school_name>.tex  (your school paragraph; the school name SHOUL be in the school_list)
       |-- <school_name>.tex 
       |-- ...
+  |-- build
+      |-- <school_name>.pdf   (your generated pdf file)
+      |-- ...
 
 * usage:
+  - BACKUP your writtings!!!!!!!!!!! (or use git!)
+  - write your school list based on the guidance below
+  - make sure that you have a "template.tex" under the directory "src"
+  - generate the makefile:
+    ./configure.py
   - make all: generate all personal statements
   - make [<school name> <school name> ...]: getnerate the specified personal statements
   - make clean: clean the dubug and log file of latex
+
+
+Configuration
+---
+
+The school_list is a configuration file in YAML format.
+
+example:
+
+CMU:
+    Title: Personal Statement
+    headline1: miao
+    inputLineStretch: 1.0
+HKUST:
+    Title: dslfjsd
+    
+
+Items under the schoolname is SHOULD begin with a TAB (just like the Makefile)
+
+
+Others
+---
+
+Any problems? please contact me. 
 
 Enjoy!
 
