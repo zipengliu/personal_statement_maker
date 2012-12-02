@@ -29,16 +29,20 @@ How to use it
   |-- src
       |-- template.tex
       |-- PhD.tex            (your general paragraphs)
-      |-- <school_name>.tex  (your school paragraph; the school name SHOUL be in the school_list)
+      |-- <school_name>.tex  (your school paragraph; the school name
+                              SHOULD be in the school_list)
       |-- <school_name>.tex 
       |-- ...
   |-- build
       |-- <school_name>.pdf   (your generated pdf file)
       |-- ...
 
-* usage:
+* USAGE:
   - BACKUP your writtings!!!!!!!!!!! (or use git!)
   - write your school list based on the guidance below
+    - ATTENTION: the school name should be the same in 
+      - the file name of your school specific paragraph
+      - the "input{schoolname}" command in your latex file
   - make sure that you have a "template.tex" under the directory "src"
   - generate the makefile:
     ./configure.py
@@ -62,7 +66,8 @@ HKUST:
     Title: dslfjsd
     
 
-Items under the schoolname is SHOULD begin with a TAB (just like the Makefile)
+Items under the schoolname is SHOULD begin with a TAB (just like the
+Makefile).  Each item is a definition of latex command. 
 
 
 Others
