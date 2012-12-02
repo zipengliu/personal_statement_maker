@@ -12,12 +12,12 @@ How to use it
 
   personal_statement_maker
   |
-  |-- template.tex  (your template latex file for all schools)
+  |-- template.tex           (your template latex file for all schools)
   |-- Makefile
-  |-- school_list
+  |-- school_list            (configuration file)
   |-- src
-      |-- PhD.tex
-      |-- <school_name>.tex  (the school name SHOUL be in the school_list)
+      |-- PhD.tex            (your general paragraphs)
+      |-- <school_name>.tex  (your school paragraph; the school name SHOUL be in the school_list)
       |-- <school_name>.tex 
       |-- ...
 
