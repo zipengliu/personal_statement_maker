@@ -1,0 +1,30 @@
+Personal Statement Maker
+by Winnie Liu
+
+Description
+---
+A make file to automatically generate multiple personal statements.
+
+How to use it
+---
+
+* files layout: 
+
+  personal_statement_maker
+  |
+  |-- template.tex  (your template latex file for all schools)
+  |-- Makefile
+  |-- school_list
+  |-- src
+      |-- PhD.tex
+      |-- <school_name>.tex  (the school name SHOUL be in the school_list)
+      |-- <school_name>.tex 
+      |-- ...
+
+* usage:
+  - make all: generate all personal statements
+  - make [<school name> <school name> ...]: getnerate the specified personal statements
+  - make clean: clean the dubug and log file of latex
+
+Enjoy!
+
