@@ -3,6 +3,7 @@
 import os
 import yaml
 
+os.system("mkdir img build")
 
 f = open("school_list")
 conf = yaml.load(f)
@@ -35,5 +36,8 @@ f.write(".PHONY: clean\n")
 f.write("clean:\n")
 f.write("\trm *.log *.out *.aux ./build/*.pdf")
 
+f.close()
+
+print "configure finished"
 
 
