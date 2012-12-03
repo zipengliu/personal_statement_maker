@@ -3,7 +3,12 @@
 import os
 import yaml
 
-os.system("mkdir img build")
+if not os.path.exists("src"):
+    os.system("mkdir src")
+    print "You have to put all your source file (*.tex) into src/"
+    exit
+if not os.path.exists("build"):
+    os.system("mkdir build")
 
 f = open("school_list")
 conf = yaml.load(f)
@@ -37,6 +42,8 @@ f.write("clean:\n")
 f.write("\trm *.log *.out *.aux ./build/*.pdf")
 
 f.close()
+
+os.system("touch src/*.tex")
 
 print "configure finished"
 
