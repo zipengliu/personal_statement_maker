@@ -1,7 +1,11 @@
 # file for test
+default:
+    Title: msdfs
+    inputLineStretch: 2.0
 
 HKUST:
     Title: miao
     headline1: maio
     headline2: dsfds
+    schoolname: HKUST
     inputLineStretch: 1.0
