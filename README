@@ -28,7 +28,7 @@ How to use it
   |-- school_list            (configuration file)
   |-- src
       |-- template.tex
-      |-- PhD.tex            (your general paragraphs)
+      |-- <general_file_name>.tex   (your general paragraphs)
       |-- <school_name>.tex  (your school paragraph; the school name
                               SHOULD be in the school_list)
       |-- <school_name>.tex 
@@ -36,6 +36,9 @@ How to use it
   |-- build
       |-- <school_name>.pdf   (your generated pdf file)
       |-- ...
+  |-- img
+      |-- <whatever.jpg>      (if you have a image to include in your 
+                              tex, put it here)
 
 * USAGE:
   - BACKUP your writtings!!!!!!!!!!! (or use git!)
@@ -56,18 +59,31 @@ Configuration
 
 The school_list is a configuration file in YAML format.
 
-example:
+example school_list:
+
+default:
+    inputLineStretch: 1.5
+    general_file_name: long.tex
 
 CMU:
     Title: Personal Statement
     headline1: miao
+    general_file_name: short.tex
     inputLineStretch: 1.0
+
 HKUST:
-    Title: dslfjsd
+    Title: pia 
     
 
-Items under the schoolname is SHOULD begin with a TAB (just like the
-Makefile).  Each item is a definition of latex command. 
+* Items under the schoolname is SHOULD begin with a TAB (just like the
+  Makefile).  Each item is a definition of latex command. 
+* You can have default options, which will go with all your school
+  personal statements as long as you don't change the value of it.
+* You can add a comment to the school_list led by a "#"
+* Feel free to have any blank lines
+
+* Please specify your general paragraph latex file name using the
+  "general_file_name" 
 
 
 Others
