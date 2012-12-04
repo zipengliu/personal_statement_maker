@@ -44,7 +44,7 @@ for name in conf:
         else:
             general_file_name = "PhD.tex"
 
-        f.write(name + " : " + "src/" + name + ".tex src/" + general_file_name + "\n")
+        f.write(name + " : " + "src/" + name + ".tex src/" + general_file_name + " configure.py\n")
         f.write("\tcat src/" + general_file_name + " src/" + name + ".tex > temp.tex\n")
         f.write("\tpdflatex -jobname=\"" + name + "\" \"")
 
@@ -76,7 +76,7 @@ f.write("\trm *.log *.out *.aux ./build/*.pdf")
 
 f.close()
 
-os.system("touch src/*.tex")
+# os.system("touch src/*.tex")
 
 print "configure finished"
 
